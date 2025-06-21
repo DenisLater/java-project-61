@@ -1,6 +1,7 @@
 plugins {
     id("java")
     application
+    id("org.sonarqube") version "6.2.0.5505"
 }
 
 application {
@@ -28,3 +29,10 @@ tasks.test {
 }
 
 
+sonar {
+    properties {
+        property("sonar.projectKey", "DenisLater_java-project-61")
+        property("sonar.organization", "denislater")
+        property("sonar.host.url", "https://sonarcloud.io")
+    }
+}
